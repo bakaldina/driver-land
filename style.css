@@ -18,6 +18,10 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
+.button:hover {
+    background-color: #ff5701;
+}
+
 /*header*/
 
 header {
@@ -48,6 +52,17 @@ header {
 .head-top_right a img {
     vertical-align: bottom;
     padding-left: 20px;
+}
+.head-top_right a img:hover,
+.google img:hover {
+    filter: opacity(0.5);
+}
+.head-bottom span:hover {
+    transform: translateY(5px);
+    transition: transform 200ms linear;
+}
+.head-bottom span:not(hover) {
+    transition: transform 200ms linear;
 }
 .head-middle {
     max-width: 1200px;
@@ -91,7 +106,6 @@ small {
     width: 24px;
     height: 24px;
     background-image: url("img/angle-up.svg");
-    transform: rotate(180deg);
     position: absolute;
     top: 30px;
     left: calc(50% - 12px);
@@ -359,7 +373,7 @@ footer {
     justify-content: space-evenly;
 }
 .mobile-screen-768 {
-    display: block;
+    display: none;
 }
 .mobile-block {
     display: none;
@@ -367,6 +381,7 @@ footer {
 .mobile-screen-375 {
     display: none;
 }
+
 @media screen and (max-width: 1300px) {
     header {
         min-height: 800px;
